@@ -18,8 +18,16 @@ public class CustomOAuth2UserService extends DefaultOAuth2UserService {
         log.info("[loadUser] oAuth2User : {}", oAuth2User);
 
         String registrationId = userRequest.getClientRegistration().getRegistrationId();
+        
+        if (registrationId.equals("naver")) {
+            
+        } else if (registrationId.equals("google")) {
+            
+        } else {
+          return null;
+        }
 
-
+        // 추후 로직 작성
         return super.loadUser(userRequest);
     }
 }
