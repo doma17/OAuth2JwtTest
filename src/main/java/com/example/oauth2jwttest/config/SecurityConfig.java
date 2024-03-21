@@ -33,7 +33,6 @@ public class SecurityConfig {
         this.jwtUtil = jwtUtil;
     }
 
-
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 
